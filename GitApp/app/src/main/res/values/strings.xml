@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Git App</string>
+    <string name="fragment_user_search">User Search</string>
+    <string name="search_label">Search Users</string>
+    <string name="search_hint">Search Users</string>
+    <string name="warning_label">Warning</string>
+    <string name="no_internet_label">Please check your internet connection and try again.</string>
+    <string name="ok_label">OK</string>
+    <string name="no_data_label">Could not find any users</string>
+    <string name="fragment_user_detail">User Detail</string>
+</resources>

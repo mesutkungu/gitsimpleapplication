@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dest_search">
+    <fragment
+        android:id="@+id/dest_search"
+        android:name="com.app.gitapp.ui.fragment.UserSearchFragment"
+        android:label="@string/fragment_user_search"
+        tools:layout="@layout/fragment_user_search">
+        <action
+            android:id="@+id/action_view_pager_fragment_to_user_detail_fragment"
+            app:destination="@id/dest_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/dest_detail"
+        android:name="com.app.gitapp.ui.fragment.UserDetailFragment"
+        android:label="@string/fragment_user_detail"
+        tools:layout="@layout/fragment_user_detail">
+        <action
+            android:id="@+id/action_back"
+            app:destination="@id/dest_search"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/dest_search"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+</navigation>
