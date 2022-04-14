@@ -58,11 +58,11 @@ class UserSearchFragment : Fragment() {
         showProgress()
         activity?.let { ViewUtil.hideKeyboard(it) }
         viewModel.searchUser(binding.svUserSearch.query.toString())
-        viewModel.gifResponse.observe(viewLifecycleOwner) { response ->
+        viewModel.gitResponse.observe(viewLifecycleOwner) { response ->
             when (response) {
                 is NetworkResponse.Success -> {
                     dismissProgress()
-                    if (response.data?.items?.size == 0) {
+                    if (response.data?.items?.isEmpty() == true) {
                         showError()
                     } else {
                         binding.tvNoData.visibility = View.GONE

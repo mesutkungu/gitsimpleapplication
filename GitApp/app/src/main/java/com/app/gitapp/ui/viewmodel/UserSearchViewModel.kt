@@ -17,7 +17,7 @@ class UserSearchViewModel @Inject constructor(
 ) : ViewModel() {
     private val _gitResponse by lazy { MutableLiveData<NetworkResponse<SearchOutput>>() }
 
-    val gifResponse: LiveData<NetworkResponse<SearchOutput>>
+    val gitResponse: LiveData<NetworkResponse<SearchOutput>>
         get() = _gitResponse
 
     fun searchUser(query: String) = viewModelScope.launch {
